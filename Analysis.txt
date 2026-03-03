@@ -1,10 +1,10 @@
 The average latency measurements from Part IV-A.
 
 (base) MacBook-Air-990:Homework-2 shannonh$ node latency_measurement.js
-US /register avg: 55.09 ms
-EU /register avg: 285.71 ms
-US /list     avg: 91.95 ms
-EU /list     avg: 602.69 ms
+US /register avg: 63.3360917 ms
+EU /register avg: 310.58042920000014 ms
+US /list     avg: 103.22040819999992 ms
+EU /list     avg: 630.4265125999998 ms
 
 The results from your eventual consistency experiment in Part IV-B (i.e., how many times the username was not found).
 
@@ -12,4 +12,7 @@ The results from your eventual consistency experiment in Part IV-B (i.e., how ma
 Iterations: 100
 Not found immediately after registration: 0 times
 
-A brief (1–2 paragraph) discussion of your findings. Why do you think the latencies differ? What does your consistency experiment show?
+Discussion of Findings:
+The latency results show that there is a clear regional effect. In both /register and /list, the US latency measurement is significantly less than the EU measurement. The average US /register measurement was roughly 247ms faster than the EU measurement. The average US /list measurement was roughly 527ms faster than the EU measurement. I believe that this difference is due to a transatlantic network delay. Since the script was executed from a client located in the United States, requests to the Europe region required a longer round trip network path. Transatlantic connections would cause delay due additional physical distance, potential congestion, and more. This could explain why the EU measurements were consistently slower than the US measurements.
+
+In the eventual consistency experiement, the result was that there was 0 times the newly registered username in one region was not immediately found in another. If the system had eventual consistency, there might have been a couple of times where the newly registered username in one region was not immediately found in another. If the system had strict consistency, there would have been no times where the username wasn't found. The result of 0 misses suggests that the replication latency across regions in Firestore is very low. However, the results of our experiment doesn't prove definitively strong consistency. According to Firestore’s documentation, many read operations are strongly consistent, which may explain why no replication lag was detected during testing.
