@@ -8,4 +8,8 @@ EU /list     avg: 602.69 ms
 
 The results from your eventual consistency experiment in Part IV-B (i.e., how many times the username was not found).
 
+(base) MacBook-Air-990:Homework-2 shannonh$ node consistency_measurement.js
+Iterations: 100
+Not found immediately after registration: 0 times
+
 A brief (1–2 paragraph) discussion of your findings. Why do you think the latencies differ? What does your consistency experiment show?
