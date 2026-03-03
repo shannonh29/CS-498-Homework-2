@@ -1,1 +1,7 @@
+The average latency measurements from Part IV-A.
 
+(base) MacBook-Air-990:Homework-2 shannonh$ node latency_measurement.js
+US /register avg: 55.09 ms
+EU /register avg: 285.71 ms
+US /list     avg: 91.95 ms
+EU /list     avg: 602.69 ms
