@@ -1,1 +1,1 @@
-
+A file describing your implementation of the scripts used to measure latency for section IV. The other code in the assignment is basically following the listed directions. If you attempted the assignment differently from these instructions, please describe briefly what you did in this section.
