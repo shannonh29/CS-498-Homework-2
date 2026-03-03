@@ -5,3 +5,5 @@ US /register avg: 55.09 ms
 EU /register avg: 285.71 ms
 US /list     avg: 91.95 ms
 EU /list     avg: 602.69 ms
+
+The results from your eventual consistency experiment in Part IV-B (i.e., how many times the username was not found).
