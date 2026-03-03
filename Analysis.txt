@@ -7,3 +7,5 @@ US /list     avg: 91.95 ms
 EU /list     avg: 602.69 ms
 
 The results from your eventual consistency experiment in Part IV-B (i.e., how many times the username was not found).
+
+A brief (1–2 paragraph) discussion of your findings. Why do you think the latencies differ? What does your consistency experiment show?
